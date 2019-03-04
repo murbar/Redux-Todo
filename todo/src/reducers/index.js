@@ -1,7 +1,7 @@
 import { ADD_TODO, TOGGLE_TODO } from '../actions';
 
 const initialState = {
-  todos: []
+  todos: ['todo 1', 'todo 2']
 };
 
 export default (state = initialState, action) => {
