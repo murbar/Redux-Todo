@@ -5,6 +5,6 @@ export const addTodo = () => ({
   type: ADD_TODO
 });
 
-export const toogleTodoCompleted = () => ({
+export const toggleTodoCompleted = () => ({
   type: TOGGLE_TODO
 });
