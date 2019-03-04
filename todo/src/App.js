@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <h1>Redux Todo</h1>
         <TodoForm />
-        <TodoList />
+        <TodoList todos={this.props.todos} />
       </div>
     );
   }
