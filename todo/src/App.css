@@ -16,3 +16,19 @@ body {
 .App h1 {
   margin: 0 0 0.5rem;
 }
+
+input,
+button {
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0.25rem 0.75rem;
+}
+
+button {
+  margin: 0 0.5rem;
+  background: #444;
+  color: white;
+  /* font-size: 0.8rem; */
+  font-weight: bold;
+}
