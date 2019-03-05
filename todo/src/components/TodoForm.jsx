@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addTodo, toggleTodoCompleted } from '../actions';
 
 const TodoForm = props => {
   console.log(props);
@@ -12,4 +14,13 @@ const TodoForm = props => {
   );
 };
 
-export default TodoForm;
+const mapStateToProps = state => {
+  return {
+    todos: state.todos
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { addTodo }
+)(TodoForm);

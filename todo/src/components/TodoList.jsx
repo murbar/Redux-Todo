@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addTodo, toggleTodoCompleted } from '../actions';
 
 const TodoList = ({ todos }) => {
   return (
@@ -12,4 +14,13 @@ const TodoList = ({ todos }) => {
   );
 };
 
-export default TodoList;
+const mapStateToProps = state => {
+  return {
+    todos: state.todos
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { toggleTodoCompleted }
+)(TodoList);
