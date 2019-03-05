@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleTodoCompleted } from '../actions';
+import { removeTodo, toggleTodoCompleted } from '../actions';
 
-const TodoList = ({ todos, toggleTodoCompleted }) => {
+const TodoList = ({ todos, toggleTodoCompleted, removeTodo }) => {
   return (
     <div className="todo-list">
       <ul>
@@ -14,6 +14,9 @@ const TodoList = ({ todos, toggleTodoCompleted }) => {
             data-completed={t.completed}
           >
             {t.text}
+            <button className="remove" onClick={() => removeTodo(t.id)}>
+              X
+            </button>
           </li>
         ))}
       </ul>
@@ -29,5 +32,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { toggleTodoCompleted }
+  { toggleTodoCompleted, removeTodo }
 )(TodoList);
