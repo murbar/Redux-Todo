@@ -1,16 +1,18 @@
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 
-export const addTodo = () => {
-  console.log('add');
+export const addTodo = text => {
+  console.log('add', text);
   return {
-    type: ADD_TODO
+    type: ADD_TODO,
+    text
   };
 };
 
-export const toggleTodoCompleted = () => {
-  console.log('toggle');
+export const toggleTodoCompleted = id => {
+  console.log('toggle', id);
   return {
-    type: TOGGLE_TODO
+    type: TOGGLE_TODO,
+    id
   };
 };
