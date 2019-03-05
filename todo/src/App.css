@@ -29,9 +29,13 @@ button {
   margin: 0 0.5rem;
   background: #444;
   color: white;
-  /* font-size: 0.8rem; */
   font-weight: bold;
 }
 .todo-item[data-completed='true'] {
   text-decoration: line-through;
+}
+
+.todo-item .remove {
+  display: inline-block;
+  transform: scale(0.5);
 }
