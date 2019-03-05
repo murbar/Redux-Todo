@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from '../actions';
+import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from '../actions';
 
 const newTodo = text => {
   return {
@@ -28,6 +28,10 @@ export default (state = initialState, action) => {
     case ADD_TODO:
       return {
         todos: [...state.todos, newTodo(action.text)]
+      };
+    case REMOVE_TODO:
+      return {
+        todos: state.todos.filter(todo => todo.id !== action.id)
       };
     case TOGGLE_TODO:
       return {
