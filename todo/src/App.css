@@ -1,9 +1,10 @@
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body {
   color: #444;
+  font-family: 'Caveat';
 }
 
 .App {
@@ -19,10 +20,11 @@ body {
 
 input,
 button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   border-radius: 0.25rem;
   border: none;
   padding: 0.25rem 0.75rem;
+  font-family: 'Caveat';
 }
 
 input:focus,
@@ -36,6 +38,17 @@ button {
   color: white;
   font-weight: bold;
 }
+
+ul {
+  padding: 0;
+}
+
+.todo-item {
+  font-size: 1.5rem;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
 .todo-item[data-completed='true'] .text {
   text-decoration: line-through;
 }
