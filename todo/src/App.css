@@ -32,3 +32,6 @@ button {
   /* font-size: 0.8rem; */
   font-weight: bold;
 }
+.todo-item[data-completed='true'] {
+  text-decoration: line-through;
+}

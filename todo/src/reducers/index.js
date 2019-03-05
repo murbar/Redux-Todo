@@ -3,7 +3,8 @@ import { ADD_TODO, TOGGLE_TODO } from '../actions';
 const newTodo = text => {
   return {
     id: Date.now(),
-    text
+    text,
+    completed: false
   };
 };
 
@@ -11,11 +12,13 @@ const initialState = {
   todos: [
     {
       id: 1551746276929,
-      text: 'Todo 1'
+      text: 'Todo 1',
+      completed: true
     },
     {
       id: 1551746441772,
-      text: 'Todo 2'
+      text: 'Todo 2',
+      completed: false
     }
   ]
 };

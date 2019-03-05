@@ -7,8 +7,13 @@ const TodoList = ({ todos, toggleTodoCompleted }) => {
     <div className="todo-list">
       <ul>
         {todos.map(t => (
-          <li key={t} onClick={toggleTodoCompleted}>
-            {t}
+          <li
+            className="todo-item"
+            key={t.id}
+            onClick={() => toggleTodoCompleted(t.id)}
+            data-completed={t.completed}
+          >
+            {t.text}
           </li>
         ))}
       </ul>
