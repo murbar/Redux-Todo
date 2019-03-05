@@ -13,10 +13,10 @@ const TodoList = ({ todos, toggleTodoCompleted, removeTodo }) => {
             onClick={() => toggleTodoCompleted(t.id)}
             data-completed={t.completed}
           >
-            {t.text}
-            <button className="remove" onClick={() => removeTodo(t.id)}>
-              X
-            </button>
+            <span className="text">{t.text}</span>
+            <span className="remove" onClick={() => removeTodo(t.id)}>
+              Delete
+            </span>
           </li>
         ))}
       </ul>

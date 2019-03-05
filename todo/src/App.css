@@ -31,11 +31,13 @@ button {
   color: white;
   font-weight: bold;
 }
-.todo-item[data-completed='true'] {
+.todo-item[data-completed='true'] .text {
   text-decoration: line-through;
 }
 
 .todo-item .remove {
-  display: inline-block;
-  transform: scale(0.5);
+  font-size: 0.6em;
+  margin-left: 1rem;
+  color: #777;
+  cursor: pointer;
 }
