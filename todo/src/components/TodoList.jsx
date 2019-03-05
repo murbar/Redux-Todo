@@ -15,7 +15,7 @@ const TodoList = ({ todos, toggleTodoCompleted, removeTodo }) => {
           >
             <span className="text">{t.text}</span>
             <span className="remove" onClick={() => removeTodo(t.id)}>
-              Delete
+              ×
             </span>
           </li>
         ))}
