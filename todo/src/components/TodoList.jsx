@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo, toggleTodoCompleted } from '../actions';
+import { toggleTodoCompleted } from '../actions';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, toggleTodoCompleted }) => {
   return (
     <div className="todo-list">
       <ul>
         {todos.map(t => (
-          <li key={t}>{t}</li>
+          <li key={t} onClick={toggleTodoCompleted}>
+            {t}
+          </li>
         ))}
       </ul>
     </div>
