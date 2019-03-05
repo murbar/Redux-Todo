@@ -31,7 +31,14 @@ export default (state = initialState, action) => {
       };
     case TOGGLE_TODO:
       return {
-        todos: [...state.todos]
+        todos: state.todos.map(todo => {
+          if (todo.id !== action.id) return todo;
+          return {
+            id: todo.id,
+            text: todo.text,
+            completed: !todo.completed
+          };
+        })
       };
     default:
       return state;
