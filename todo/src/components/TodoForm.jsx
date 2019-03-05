@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo, toggleTodoCompleted } from '../actions';
+import { addTodo } from '../actions';
 
 const TodoForm = props => {
   console.log(props);
