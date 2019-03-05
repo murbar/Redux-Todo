@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Redux Todo</h1>
+        <h1>Redux to-do list</h1>
         <TodoForm />
         <TodoList />
       </div>
