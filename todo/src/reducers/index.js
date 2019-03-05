@@ -38,8 +38,7 @@ export default (state = initialState, action) => {
         todos: state.todos.map(todo => {
           if (todo.id !== action.id) return todo;
           return {
-            id: todo.id,
-            text: todo.text,
+            ...todo,
             completed: !todo.completed
           };
         })
