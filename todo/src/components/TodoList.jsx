@@ -5,7 +5,7 @@ const TodoList = ({ todos }) => {
     <div className="todo-list">
       <ul>
         {todos.map(t => (
-          <li>{t}</li>
+          <li key={t}>{t}</li>
         ))}
       </ul>
     </div>
